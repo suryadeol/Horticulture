@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename = 'style1.css') }}">
+
+		<title>
+      ఎరువుల అంచనా    
+    </title>
+
+    </head>
+    <body style="background-image: url(static/images/bg-01.jpeg); background-repeat: no-repeat; background-size: cover;">
+        <center><img src="static/images/logo.png" height="100px"width="180px" style="padding-top: 0;"></center>
+        <center><div class="tab">
+          <h2 style="color: rgb(27, 47, 106);">ఎరువుల అంచనా</h2>
+            <center><hr class="rounded"></center>
+        <table>
+        <form action="/tel_fertilizer" method="POST"> 
+              <tr>
+                <td><label>ఉష్ణోగ్రత నమోదు చేయండి:</label></td>
+                <td><input type="text" id="temp" name="temp" placeholder="ఉదాహరణకి: 26"></td>
+              </tr>
+
+              <tr>
+                <td><label>తేమను నమోదు చేయండి:</label></td>
+                <td><input type="text" id="humi" name="humi" placeholder="ఉదాహరణకి: 52"></td>
+              </tr>
+
+              <tr>
+                <td><label>తేమను నమోదు చేయండి:</label></td>
+                <td><input type="text" id="moist" name="moist" placeholder="ఉదాహరణకి: 38"></td>
+              </tr>
+              <tr>
+                <td><label>నేల రకాన్ని నమోదు చేయండి:</label></td>
+                <td><input type="text" id="st" name="st" placeholder="ఉదాహరణకి: ఇసుక"></td>
+              </tr>
+
+              <tr>
+                <td><label>పంట రకాన్ని నమోదు చేయండి:</label></td>
+                <td><input type="text" id="ct" name="ct" placeholder="ఉదాహరణకి: బియ్యం"></td>
+              </tr>
+              <tr>
+                <td><label>నైట్రోజన్‌ని నమోదు చేయండి:</label></td>
+                <td><input type="text" id="nitro" name="nitro" placeholder="ఉదాహరణకి: 37"></td>
+              </tr>
+
+              <tr>
+                <td><label>పొటాషియం నమోదు చేయండి:</label></td>
+                <td><input type="text" id="potash" name="potash" placeholder="ఉదాహరణకి: 10"></td>
+              </tr>
+              <tr>
+                <td><label>భాస్వరం నమోదు చేయండి:</label></td>
+                <td><input type="text" id="phosp" name="phosp" placeholder="ఉదాహరణకి: 20"></td>
+              </tr>
+
+              <tr>
+                <th colspan="2"><button class = "button5">ఎరువు తెలుసుకోండి</button></th>
+              </tr>
+              <tr>
+                    <td align ="center" colspan="2"><a href="/home_tel">హోమ్కి</a> తిరిగి వెళ్ళండి</a></td>
+                </tr>
+        </form>
+    </table></div></center>
+    </body>
+    </html>
+

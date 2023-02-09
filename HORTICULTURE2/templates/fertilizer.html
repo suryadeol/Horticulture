@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename = 'style.css') }}">
+
+        </title>
+    </head>
+
+
+    <body style="background-image: url(static/images/bg-01.jpeg); background-repeat: no-repeat; background-size: cover;">
+        <center><img src="static/images/logo.png" height="100px"width="180px" style="padding-top: 0;"></center>
+        <center><div class="tab">
+          <h2 style="color: rgb(27, 47, 106);">Fertilizer Prediction</h2>
+            <center><hr class="rounded"></center>
+        <table>
+        <form action="/fertilizer" method="POST">
+              <tr>
+                <td><lable>Enter Temperature:</lable></td>
+                <td><input type="text" id="temp" name="temp" placeholder="For Example: 26"></td>
+              </tr>
+
+              <tr>
+                <td><lable>Enter Humidity:</lable></td>
+                <td><input type="text" id="humi" name="humi" placeholder="For Example: 52"></td>
+              </tr>
+
+              <tr>
+                <td><lable>Enter Moisture:</lable></td>
+                <td><input type="text" id="moist" name="moist" placeholder="For Example: 38"></td>
+              </tr>
+              <tr>
+                <td><lable>Enter Soil type:</lable></td>
+                <td><input type="text" id="st" name="st" placeholder="For Example: sandy"></td>
+              </tr>
+
+              <tr>
+                <td><lable>Enter Crop type:</lable></td>
+                <td><input type="text" id="ct" name="ct" placeholder="For Example: paddy"></td>
+              </tr>
+              <tr>
+                <td><lable>Enter Nitrogen:</lable></td>
+                <td><input type="text" id="nitro" name="nitro" placeholder="For Example: 37"></td>
+              </tr>
+
+              <tr>
+                <td><lable>Enter Potassium:</lable></td>
+                <td><input type="text" id="potash" name="potash" placeholder="For Example: 10"></td>
+              </tr>
+              <tr>
+                <td><lable>Enter Phosphorous:</lable></td>
+                <td><input type="text" id="phosp" name="phosp" placeholder="For Example: 20"></td>
+              </tr>
+
+              <tr>
+                <th colspan="2"><button class = "button5">Predict Fertilizer</button></th>
+              </tr>
+              <tr>
+                    <td align ="center" colspan="2">Go back to <a href="/server_home">Home</a></td>
+                </tr>
+        </form>
+    </table></div></center>
+    </body>
+    </html>

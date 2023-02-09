@@ -1,0 +1,79 @@
+#machine learning model
+
+#Data Preprocessing
+#importing the libraries
+import numpy as np
+import pandas as pd
+import pickle
+
+#load the dataset
+dataset = pd.read_csv('crop_production_ap.csv')
+
+print(dataset.dtypes)
+#handling missing data
+dataset.dropna(inplace=True)
+dataset.drop(['Crop_Year'],axis=1, inplace = True)
+
+#label encoding
+from sklearn.preprocessing import LabelEncoder
+LE = LabelEncoder()
+dataset['District_Name'] = LE.fit_transform(dataset.District_Name)
+print(LE.classes_)
+dataset['Season'] = LE.fit_transform(dataset.Season)
+dataset['State_Name'] = LE.fit_transform(dataset.State_Name)
+dataset['Crop'] = LE.fit_transform(dataset.Crop)
+print(dataset.head())
+
+#seperate in independent and dependent variables
+print(dataset.columns)
+x = dataset.iloc[:,0:5]
+print(x.head())
+y = dataset.loc[:,'Production']
+
+#dividing into train and test data
+from sklearn.model_selection import train_test_split
+x_train,x_test,y_train,y_test = train_test_split(x,y,test_size=0.25,random_state=0)
+
+#importing random forest
+from sklearn.ensemble import RandomForestRegressor
+model = RandomForestRegressor()
+model.fit(x_train,y_train)
+y_pred = model.predict(x_test)
+
+#accuracy
+print("model score:",model.score(x_test,y_test)*100)
+
+#RMS Score method for accuracy
+from sklearn.metrics import r2_score
+r1 = r2_score(y_test,y_pred)
+print("R2 score : ",r1*100)
+
+#data visualization
+import matplotlib.pyplot as plt
+plt.scatter(y_test,range(0,len(y_test)))
+plt.show()
+
+plt.scatter(y_pred,range(0,len(y_pred)))
+plt.show()
+'''arr=np.array(l)
+arr=arr.reshape(1,-1)
+print("output:",model.predict(arr))'''
+
+#encoded crop values
+encoded_crop_values = dataset['Crop'].sort_values().unique()
+print(encoded_crop_values)
+
+#crop names from label encoder classes
+crop_names= LE.classes_
+print(sorted(crop_names))
+
+#data frame for crop_names vs encoded_values
+df=pd.DataFrame({
+      'CropName':['Arecanut', 'Arhar/Tur', 'Bajra', 'Banana', 'Beans & Mutter(Vegetable)', 'Bhindi', 'Bottle Gourd', 'Brinjal', 'Cabbage', 'Cashewnut', 'Castor seed', 'Citrus Fruit', 'Coconut ', 'Coriander', 'Cotton(lint)', 'Cowpea(Lobia)', 'Cucumber', 'Dry chillies', 'Dry ginger', 'Garlic', 'Ginger', 'Gram', 'Grapes', 'Groundnut', 'Horse-gram', 'Jowar', 'Korra', 'Lemon', 'Linseed', 'Maize', 'Mango', 'Masoor', 'Mesta', 'Moong(Green Gram)', 'Niger seed', 'Onion', 'Orange', 'Other  Rabi pulses', 'Other Fresh Fruits', 'Other Kharif pulses', 'Other Vegetables', 'Papaya', 'Peas  (vegetable)', 'Pome Fruit', 'Pome Granet', 'Potato', 'Ragi', 'Rapeseed &Mustard', 'Rice', 'Safflower', 'Samai', 'Sapota', 'Sesamum', 'Small millets', 'Soyabean', 'Sugarcane', 'Sunflower', 'Sweet potato', 'Tapioca', 'Tobacco', 'Tomato', 'Turmeric', 'Urad', 'Varagu', 'Wheat', 'other fibres', 'other misc. pulses', 'other oilseeds']
+    })
+df['encoded']=LE.fit_transform(df['CropName'])
+print(df.to_string())
+
+
+pickle.dump(model, open('model.pkl', 'wb'))
+model = pickle.load(open('model.pkl', 'rb'))

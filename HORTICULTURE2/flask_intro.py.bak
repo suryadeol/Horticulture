@@ -1,0 +1,69 @@
+from flask import Flask,render_template,request,url_for
+import pickle
+import numpy as np
+
+app = Flask('__name__')
+
+model = pickle.load(open('model.pkl', 'rb'))
+model1 = pickle.load(open('model1.pkl', 'rb'))
+
+@app.route('/')
+def index():
+    return render_template('home.html')
+    
+@app.route('/venkat', methods = ['GET', 'POST'])
+def login():
+    if(request.method == "POST"):
+        s = int(request.form['state'])
+        c = request.form['crop']
+        d = request.form['dis']
+        ses =request.form['season']
+        a = float(request.form['area'])
+        
+        
+        dist=['ANANTAPUR','CHITTOOR', 'EAST GODAVARI', 'GUNTUR' ,'KADAPA', 'KRISHNA',
+ 'KURNOOL' ,'PRAKASAM', 'SPSR NELLORE', 'SRIKAKULAM', 'VISAKHAPATANAM',
+ 'VIZIANAGARAM', 'WEST GODAVARI']
+        d1=dist.index(d.upper())
+        crp=['Arecanut', 'Arhar/Tur', 'Bajra', 'Banana', 'Beans & Mutter(Vegetable)', 'Bhindi', 'Bottle Gourd', 'Brinjal', 'Cabbage', 'Cashewnut', 'Castor seed', 'Citrus Fruit', 'Coconut ', 'Coriander', 'Cotton(lint)', 'Cowpea(Lobia)', 'Cucumber', 'Dry chillies', 'Dry ginger', 'Garlic', 'Ginger', 'Gram', 'Grapes', 'Groundnut', 'Horse-gram', 'Jowar', 'Korra', 'Lemon', 'Linseed', 'Maize', 'Mango', 'Masoor', 'Mesta', 'Moong(Green Gram)', 'Niger seed', 'Onion', 'Orange', 'Other  Rabi pulses', 'Other Fresh Fruits', 'Other Kharif pulses', 'Other Vegetables', 'Papaya', 'Peas  (vegetable)', 'Pome Fruit', 'Pome Granet', 'Potato', 'Ragi', 'Rapeseed &Mustard', 'Rice', 'Safflower', 'Samai', 'Sapota', 'Sesamum', 'Small millets', 'Soyabean', 'Sugarcane', 'Sunflower', 'Sweet potato', 'Tapioca', 'Tobacco', 'Tomato', 'Turmeric', 'Urad', 'Varagu', 'Wheat', 'other fibres', 'other misc. pulses', 'other oilseeds']
+        c1=crp.index(c.title())
+        seso=['Kharif','Rabi','Whole Year']
+        ses1=seso.index(ses.title())
+        arr=np.array([s,c1,d1,ses1,a])
+        arr=arr.reshape(1,-1)
+        res = model.predict(arr)
+        return render_template("open.html", n = res)
+    else:
+        return "Sorry!!"
+
+        
+@app.route('/crop_demand', methods = ['GET','POST'])
+def crop_demand():
+    return render_template('yeild_prediction.html')
+    
+@app.route('/crop_recommend', methods = ['GET', 'POST'])
+def crop_recommend():
+    return render_template('crp_type.html')
+
+@app.route('/predict', methods=['GET', 'POST'])
+def predict():
+    if(request.method == "POST"):
+        n = int(request.form['nit'])
+        k = int(request.form['pot'])
+        p = int(request.form['phos'])
+        t = float(request.form['tem'])
+        ph = float(request.form['ph'])
+        r = float(request.form['rf'])
+        h = float(request.form['hum'])
+        arr=np.array([n,k,p, t,h,ph,r])
+        arr=arr.reshape(1,-1)
+        res = model1.predict(arr)
+        crop_names = ['banana','bananan','cashewnut','coconut' ,'cotton' ,'drychillies', 'grapes',
+ 'groundnut' ,'maize' ,'mango', 'onion' ,'orange' ,'papaya', 'pomegranate',
+ 'ragi' ,'rice', 'sugarcane' ,'sunflower', 'sweetpoatato' ,'tobacco' ,'tomato',
+ 'tumeric']
+        c1 = crop_names[res[0]]
+        return render_template("open.html", n = c1)
+    
+if __name__ == "__main__":
+    app.run(debug = True)

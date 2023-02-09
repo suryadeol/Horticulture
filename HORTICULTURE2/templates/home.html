@@ -1,0 +1,195 @@
+<html>
+
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename = 'style.css') }}">
+
+        <link rel="stylesheet" type="text/css" href="sty.css">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!--<link rel="stylesheet" href="D:\SEM FOLDERS\V SEM FOLDERS\hackathon\hackathon_suma\static\style.css"/> -->
+
+        <title>
+		Smart Farm
+        </title>    </head>
+           <style>
+            .agri button{
+              padding: 10px 45px;
+    text-align: center;
+    font-size: 15px;
+    border: none;
+    background-color: #81c8a4;
+background-image: linear-gradient(315deg, #97f587 0%, #93e771 74%);
+border-radius: 40px;
+            }
+            .agri button:hover{
+    background: rgb(16, 93, 54);
+}
+.agri button a{
+    text-decoration: none; 
+    color: aliceblue;
+}
+           </style>
+    <body>
+        <div class="top">
+            <img src="static/images/logo.png" height="100px"width="180px" style="padding-top: 0;">
+            <nav>
+              <a href="/server_home"><h3>Home</h3></a>
+              <a href="/chatter_bot"><h3>Help</h3></a>
+              <a href="/about_us"><h3>About us</h3></a>
+              <a href="/contact_us"><h3>Contact us</h3></a>
+            </nav>
+        </div>
+
+        <div class="agri">
+            <img src="static/images/farm.png" height="650px" width="550px">
+            <div class="content">
+            <center><h2>Know which crop is suitable for your land with the help of "Smart Farm".</h2></center>
+            <center><h3>Smart Farm will help you to be aware of demand of your crop.</h3></center>
+            <center><h3>Find Suitable Fertilizer for your crop.</h3></center>
+            <center><button><a href="/tel_eng">English --> తెలుగు</a></button></center>
+            </div>
+        </div>
+
+<!-- chatter bot  -->
+        <div class="icon"><a href="/chatter_bot"><i class="fa fa-comments" aria-hidden="true"></i></a>
+        </div>
+
+        <div class="slideshow-container">
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+
+
+            <div class="mySlides fade">
+          <table style="width:100%">
+          <tr>
+          <td><div class="row1">   
+                            <div class="op1">
+                                <center><img src="static/images/demand.png"><br></center>
+                                <center><h2>Crop Yeild</h2></center>
+                                <center><button><a href="/crop_demand">Go Now</a></button></center>
+                            </div></div></td>
+          <td><div class="row1"><div class="op2">
+                                <center><img src="static/images/crop.png"><br></center>
+                                <center><h2>Suitable Fertilizer</h2></center>
+                                <center><button><a href="/fertilizer_type">Go Now</a></button></center>
+                            </div></div></td>
+          <td><div class="row1"><div class="op1">
+                                <center><img src="static/images/type.png"><br></center>
+                                <center><h2>Crop Type</h2></center>
+                                <center><button><a href="/crop_recommend">Go Now</a></button></center>
+                            </div></div></td>
+          </tr>
+        </table>
+        
+        </div>
+        
+        <div class="mySlides fade">
+            <table style="width:100%">
+            <tr>
+            <td><div class="row1">   
+                              <div class="op1">
+                                  <center><img src="static/images/mixed.jpg" style="border-radius: 50%; height:150px;"><br></center>
+                                  <center><h2>Mixed Crop</h2></center>
+                                  <center><button><a href="/mixed_crop">Go Now</a></button></center>
+                              </div></div></td>
+            <td><div class="row1"><div class="op2">
+                                  <center><img src="static/images/disease.jpg" style="border-radius: 50%; height: 150px;"><br></center>
+                                  <center><h2>Disease Prediction</h2></center>
+                                  <center><button><a href="/image_disease">Go Now</a></button></center>
+                              </div></div></td>
+            <td><div class="row1"><div class="op1">
+                                  <center><img src="static/images/water.png" style="border-radius: 50%; height: 150px;"><br></center>
+                                  <center><h2>Irrigation Level</h2></center>
+                                  <center><button><a href="/crop_water">Go Now</a></button></center>
+                              </div></div></td>
+            
+            </tr>
+          </table>
+          
+          </div> 
+        <div class="mySlides fade">
+            <table style="width:100%">
+            <tr>
+            <td><div class="row1">   
+                              <div class="op1">
+                                  <center><img src="static/images/seed.jpg" style="border-radius: 50%; height:150px;"><br></center>
+                                  <center><h2>Seed Quality Test</h2></center>
+                                  <center><button><a href="/seed_quality">Go Now</a></button></center>
+                              </div></div></td>
+            <td><div class="row1"><div class="op2">
+                                  <center><img src="static/images/about.jpg" style="border-radius: 50%; height:150px;"><br></center>
+                                  <center><h2>About Us</h2></center>
+                                  <center><button><a href="/about_us">Go Now</a></button></center>
+                              </div></div></td>
+            <td><div class="row1"><div class="op1">
+                                  <center><img src="static/images/robot.jpg" style="border-radius: 50%; height:150px;"><br></center>
+                                  <center><h2>Need Help</h2></center>
+                                  <center><button><a href="/chatter_bot">Contact Us</a></button></center>
+                              </div></div></td>
+            
+            </tr>
+          </table>
+          </div> 
+
+        
+
+            <a class="next" onclick="plusSlides(1)">❯</a>
+        </div>
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+                <br>
+                    <script>
+                       function swipe(){
+                        var swiper = new Swiper(".mySwiper", {
+                          slidesPerView: 3,
+                          spaceBetween: 30,
+                          slidesPerGroup: 3,
+                          loop: true,
+                          loopFillGroupWithBlank: true,
+                          pagination: {
+                            el: ".swiper-pagination",
+                            clickable: true,
+                          },
+                          navigation: {
+                            nextEl: ".swiper-button-next",
+                            prevEl: ".swiper-button-prev",
+                          },
+                        });
+                       }
+                let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+        
+        </script>
+
+    </body>
+</html>

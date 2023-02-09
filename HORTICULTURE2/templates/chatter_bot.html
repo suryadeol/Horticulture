@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <link rel="stylesheet" href="{{ url_for('static', filename = 'sty.css') }}">
+    <!--<link rel="stylesheet" href="{{ url_for('static', filename = 'copy.css') }}">-->
+</head>
+<style>
+   /**{
+      background-image: url(static/images/chatbot1.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: auto;
+      height: auto;
+   }*/
+.mobile{
+   position: fixed;
+   float:left;
+}
+.btncancel{
+   float: right;
+}
+.open-button{
+   float: right;
+   padding-top: 50%;
+}
+.open-button img{
+   border-radius: 50%;
+   margin-top:80px;
+}
+.open-button{
+background-color: white;
+}
+/*hover*/
+.open-button :hover{
+   transform: translateY(5px);
+}
+/*button icon*/
+.open-button img{
+width: 40px;
+height: 40px;
+}
+.main {
+   width: 800px;
+  margin-top:10%;
+  margin-left: 35%;
+  margin-right: 10%;
+  border: 2px solid;
+  padding-left: 0;
+  /*padding: 10px;*/
+  box-shadow: 6px 4px 8px 4px;
+}
+</style>
+<body>
+  <div class="over">
+   <div class="mobile"><img src="static/images/mobile.png" height="600px" width="400px"></div>
+   <div class="main">
+     
+     <i class="fa-solid fa-comments-question-check"></i>
+  <div class="box" id="box">
+     
+     <div class="heading",background-color="black"><center><h1>Chat with Smart Bot</h1></center></div>
+  <div id="chatbox" class="cbox">
+  
+  </div>
+  <div id="userInput">
+  <center><input id="textInput" type="text" name="msg" placeholder="Message">
+  <button class="buttonInput" id="buttonInput" type="submit"><img src="static/images/send1.png" style="background-color: rgb(88, 122, 110);"></button></center>
+  </div>
+  <center><h3>Done With ChatBot. Go Back To <a href="/server_home">Home</a>.</h3></center>
+  </div>
+   </div>
+  </div>
+<script>
+
+
+function getBotResponse() {
+var rawText = $("#textInput").val();
+var userHtml = '<p class="userText"><span>' + rawText + '</span></p><br>';
+$("#textInput").val("");
+$("#chatbox").append(userHtml);
+document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
+
+$.get("/get", { msg: rawText }).done(function(data) 
+{
+var botHtml = '<p class="botText"><span>' + data + '</span></p><br>';
+$("#chatbox").append(botHtml);
+document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
+});
+}
+$("#textInput").keypress(function(e) {
+if(e.which == 13) {
+getBotResponse();
+}
+});
+$("#buttonInput").click(function() {
+getBotResponse();
+})
+</script>
+</div>
+</body>
+</html>
+

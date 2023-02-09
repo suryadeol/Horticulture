@@ -1,0 +1,191 @@
+<html>
+
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename = 'style.css') }}">
+
+        <link rel="stylesheet" type="text/css" href="sty.css">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>
+            స్మార్ట్ ఫార్మ్
+        </title>
+    </head>
+<style>
+            .agri button{
+              padding: 10px 45px;
+    text-align: center;
+    font-size: 15px;
+    border: none;
+    background-color: #81c8a4;
+background-image: linear-gradient(315deg, #97f587 0%, #93e771 74%);
+border-radius: 40px;
+            }
+            .agri button:hover{
+    background: rgb(16, 93, 54);
+}
+.agri button a{
+    text-decoration: none; 
+    color: aliceblue;
+}
+           </style>
+    <body>
+
+        <div class="top">
+            <img src="static/images/logo.png" height="100px"width="180px" style="padding-top: 0;">
+            <nav>
+              <a href="/server_home"><h3>హోమ్</h3></a>
+              <a href="/chatter_bot"><h3>హెల్ప్</h3></a>
+              <a href="/about_us_"><h3>అబౌట్</h3></a>
+              <a href="/contact_us"><h3>కాంటాక్ట్ అస్</h3></a>
+            </nav>
+        </div>
+
+        <div class="agri">
+            <img src="static/images/farm.png" height="650px" width="550px">
+            <div class="content">
+            <center><h2>"స్మార్ట్ ఫార్మ్" సహాయంతో మీ భూమికి ఏ పంట అనుకూలమో తెలుసుకోండి.</h2></center>
+            <center><h3>మీ పంట దిగుబడి గురించి తెలుసుకునేందుకు స్మార్ట్ ఫార్మ్ మీకు సహాయం చేస్తుంది.</h3></center>
+            <center><h3>మీ పంటకు తగిన ఎరువులను కనుగొనండి.</h3></center>
+            <center><button><a href="/">తెలుగు --> English</a></button></center></div>
+        </div>
+
+        <!-- chatter bot  -->
+        <div class="icon"><a href="/chatter_bot"><i class="fa fa-comments" aria-hidden="true"></i></a>
+        </div>
+
+        <div class="slideshow-container">
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+
+        <div class="mySlides fade">
+          <table style="width:100%">
+          <tr>
+          <td><div class="row1">   
+                            <div class="op1">
+                                <center><img src="static/images/demand.png"><br></center>
+                                <center><h2>పంట దిగుబడి</h2></center>
+                                <center><button><a href="/yeild_tel">కొనసాగించు</a></button></center>
+                            </div></div></td>
+          <td><div class="row1"><div class="op2">
+                                <center><img src="static/images/crop.png"><br></center>
+                                <center><h2>తగిన ఎరువులు</h2></center>
+                                <center><button><a href="/fertilizer_tel">కొనసాగించు</a></button></center>
+                            </div></div></td>
+          <td><div class="row1"><div class="op1">
+                                <center><img src="static/images/type.png"><br></center>
+                                <center><h2>పంట రకం</h2></center>
+                                <center><button><a href="/type_tel">కొనసాగించు</a></button></center>
+                            </div></div></td>
+          
+          </tr>
+        </table>
+        
+        </div>
+        
+        <div class="mySlides fade">
+            <table style="width:100%">
+            <tr>
+            <td><div class="row1">   
+                              <div class="op1">
+                                  <center><img src="static/images/mixed.jpg" style="border-radius: 50%; height:140px;"><br></center>
+                                  <center><h2>మిశ్రమ పంట</h2></center>
+                                  <center><button><a href="/mixed_crop_telugu">కొనసాగించు</a></button></center>
+                              </div></div></td>
+            <td><div class="row1"><div class="op2">
+                                  <center><img src="static/images/disease.jpg" style="border-radius: 50%; height:140px;"><br></center>
+                                  <center><h2>వ్యాధి అంచనా</h2></center>
+                                  <center><button><a href="/image_disease_telugu">కొనసాగించు</a></button></center>
+                              </div></div></td>
+            <td><div class="row1"><div class="op1">
+                                  <center><img src="static/images/water.png" style="border-radius: 50%; height:140px;"><br></center>
+                                  <center><h2>నీటిపారుదల స్థాయి
+</h2></center>
+                                  <center><button><a href="/crop_water_telugu">కొనసాగించు</a></button></center>
+                              </div></div></td>
+            </tr>
+          </table>
+          
+          </div> 
+        <div class="mySlides fade">
+            <table style="width:100%">
+            <tr>
+            <td><div class="row1">   
+                              <div class="op1">
+                                  <center><img src="static/images/seed.jpg" style="border-radius: 50%; height:110px;"><br></center>
+                                  <center><h2>విత్తనాల నాణ్యత పరీక్ష
+</h2></center>
+                                  <center><button><a href="/seed_quality_telugu">కొనసాగించు</a></button></center>
+                              </div></div></td>
+            <td><div class="row1"><div class="op2">
+                                  <center><img src="static/images/about.jpg" style="border-radius: 50%; height:120px;"><br></center>
+                                  <center><h2>అబౌట్</h2></center>
+                                  <center><button><a href="/about_us">కొనసాగించు</a></button></center>
+                              </div></div></td>
+            <td><div class="row1"><div class="op1">
+                                  <center><img src="static/images/robot.jpg" style="border-radius: 50%; height:120px;"><br></center>
+                                  <center><h2>నీడ్ హెల్ప్</h2></center>
+                                  <center><button><a href="/chatter_bot">కాంటాక్ట్ అస్</a></button></center>
+                              </div></div></td>
+            
+            </tr>
+          </table>
+          </div> 
+
+          <a class="next" onclick="plusSlides(1)">❯</a>
+        </div>
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+                <br>
+                    <script>
+                       function swipe(){
+                        var swiper = new Swiper(".mySwiper", {
+                          slidesPerView: 3,
+                          spaceBetween: 30,
+                          slidesPerGroup: 3,
+                          loop: true,
+                          loopFillGroupWithBlank: true,
+                          pagination: {
+                            el: ".swiper-pagination",
+                            clickable: true,
+                          },
+                          navigation: {
+                            nextEl: ".swiper-button-next",
+                            prevEl: ".swiper-button-prev",
+                          },
+                        });
+                       }
+                let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+        </script>
+    </body>
+</html>

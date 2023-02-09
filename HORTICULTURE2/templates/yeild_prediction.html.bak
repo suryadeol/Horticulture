@@ -1,0 +1,69 @@
+<html>
+<title>YEILD PREDICTION</title>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<style>
+.dropbtn {
+  color: black;
+  padding: 16px;
+  font-size: 10px;
+  border: none;
+}
+td,h1 {
+  text-align: center;
+  height: 50px;
+}
+
+table,td{
+  font-family:cursive;
+  font-size:25px;
+}
+input[type=text],input[type=email] ,input[type=number]{
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+.button5 {
+background-color: white;
+font-size: 20px;
+
+}
+</style>
+</head>
+<body>
+<center><img src="logo.png" height="120px"width="200px" style="padding-top: 0; padding-bottom: 1%;"></center>
+<table  align="center" cellpadding="5" width="80%" height = "80%">
+<form action="/venkat" method = "POST">
+<tr>
+   <th colspan="2" style="font-family:times new roman;">🌾   <u>YEILD PREDICTION</u>   🌾</th>
+</tr>
+
+<tr>
+    <td>STATE</td> 
+    <td><input type="text" id="state" name="state" placeholder="ENTER YOUR STATE.."></td>
+</tr>
+<tr>
+    <td>DISTRICT</td>
+    <td><input type="text" id="dis" name="dis" placeholder="ENTER YOUR DISTRICT.."></td>
+</tr>
+<tr>
+    <td>SEASON</td>
+    <td><input type="text" id="season" name="season" placeholder="ENTER SEASON.."></td>
+</tr>
+<tr>
+    <td>CROP NAME</td>
+    <td><input type="text" id="crop" name="crop" placeholder="ENTER CROP NAME.."></td>
+</tr>
+<tr>
+    <td>AREA(in acres)</td>
+    <td><input type="text" id="area" name="area" placeholder="ENTER AREA IN ACRES.."></td>
+</tr>
+<tr>
+    <td align ="center" colspan="2"><button class = "button5">FIND YIELD</button></a></td>
+</tr>
+</form>
+</table>
+<a href="www.google.com">click here</a>
+</body>
+</html>

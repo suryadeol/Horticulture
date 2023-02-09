@@ -1,0 +1,54 @@
+<html>
+<title>దిగుబడి అంచనా </title>
+
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename = 'style1.css') }}">
+    </head>
+
+    <body style="background-image: url(static/images/bg-01.jpeg); background-repeat: no-repeat; background-size: cover;">
+        <center>
+            <img src="static/images/logo.png" height="100px"width="180px" style="padding-top: 0; ">
+        </center>
+
+        <center>
+            <div class="tab">
+                <h2 style="color: rgb(27, 47, 106);">దిగుబడి అంచనా</h2>
+                <center>
+                    <hr class="rounded">
+                </center>
+
+        <table  align="center" cellpadding="5" width="80%" height = "80%">
+            <form action="/yeild_pred_tel" method = "POST">
+                <tr>
+                    <td><label>రాష్ట్రాన్ని నమోదు చేయండి:</label></td>
+                    <td><input type="text" id="s" name="s" placeholder="For Example: ఆంధ్రప్రదేశ్"></td>
+                </tr>
+                <tr>
+                    <td><label>జిల్లాను నమోదు చేయండి:</label></td>
+                    <td><input type="text" id="d" name="d" placeholder="For Example: కృష్ణా"></td>
+                </tr>
+                <tr>
+                    <td><label>సీజన్‌ను నమోదు చేయండి: </label></td>
+                    <td><input type="text" id="se" name="se" placeholder="For Example: రబీ"></td>
+                </tr>
+                <tr>
+                    <td><label>పంట పేరును నమోదు చేయండి:</label></td>
+                    <td><input type="text" id="c" name="c" placeholder="For Example: బియ్యం"></td>
+                </tr>
+                <tr>
+                    <td><label>ప్రాంతాన్ని నమోదు చేయండి (హెక్టార్లలో): </label></td>
+                    <td><input type="text" id="a" name="a" placeholder="For Example: 5"></td>
+                </tr>
+                <tr>
+                    <td align ="center" colspan="2"><button class = "button5">దిగుబడిని కనుగొనండి</button></a></td>
+                </tr>
+                <tr>
+                    <td align ="center" colspan="2"><a href="/home_tel">హోమ్కి</a> తిరిగి వెళ్ళండి</a></td>
+                </tr>
+            </form>
+        </table>
+    </div>
+</center>
+</body>
+
+</html>

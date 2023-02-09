@@ -1,0 +1,58 @@
+<html>
+
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename = 'style1.css') }}">
+        <title>
+            పంట సిఫార్సు
+        </title>
+    </head>
+
+    <body style="background-image: url(static/images/bg-01.jpeg); background-repeat: no-repeat; background-size: cover;">
+        <center><img src="static/images/logo.png" height="100px"width="180px" style="padding-top: 0;"></center>
+        <center><div class="tab">
+          <h2 style="color: rgb(27, 47, 106);">పంట రకం తెలుసుకోండి.</h2>
+            <center><hr class="rounded"></center>
+        <table>
+        <form action="/predict_tel" method = "POST">
+            <tr>
+                <td><label>నైట్రోజన్‌ని నమోదు చేయండి:</label></td>
+                <td><input type="text" id="nit" name="nit" placeholder="ఉదాహరణకి: 90"></td>
+              </tr>
+              <tr>
+                <td><label>భాస్వరం నమోదు చేయండి:</label></td>
+                <td><input type="text" id="phos" name="phos" placeholder="ఉదాహరణకి: 42"></td>
+              </tr> 
+              <tr>
+                <td><label>పొటాషియం నమోదు చేయండి:</label></td>
+                <td><input type="text" id="pot" name="pot" placeholder="ఉదాహరణకి: 43"></td>
+              </tr>
+              <tr>
+                <td><label>ఉష్ణోగ్రత నమోదు చేయండి:</label></td>
+                <td><input type="text" id="tem" name="tem" placeholder="ఉదాహరణకి: 20.8"></td>
+              </tr>
+			        <tr>
+                <td><label>తేమను నమోదు చేయండి:</label></td>
+                <td><input type="text" id="hum" name="hum" placeholder="ఉదాహరణకి: 20.8"></td>
+              </tr>
+              <tr>
+                <td><label>PH స్థాయిని నమోదు చేయండి:</label></td>
+                <td><input type="text" id="ph" name="ph" placeholder="ఉదాహరణకి: 6.5"></td>
+              </tr>
+              
+              <tr>
+                <td><label>వర్షపాతాన్ని నమోదు చేయండి:</label></td>
+                <td><input type="text" id="rf" name="rf" placeholder="ఉదాహరణకి: 202.93"></td>
+              </tr>
+              <tr>
+                <th colspan="2"><button class="button5">పంట తెలుసుకోండి</button></th>
+              </tr>
+              <tr>
+                    <td align ="center" colspan="2"><a href="/home_tel">హోమ్కి</a> తిరిగి వెళ్ళండి</a></td>
+                </tr>
+        </form>
+    </table>
+    </div></center>
+
+    </body>
+    
+    </html>

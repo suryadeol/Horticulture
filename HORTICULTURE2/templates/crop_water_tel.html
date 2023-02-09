@@ -1,0 +1,61 @@
+<html>
+    <head>
+
+        <link rel="stylesheet" href="{{ url_for('static', filename = 'style.css') }}">
+
+		<title>
+            నీటిపారుదల స్థాయి
+    </title>
+
+    </head>
+
+    <body style="background-image: url(static/images/bg-01.jpeg); background-repeat: no-repeat; background-size: cover;">
+        <center>
+          <img src="static/images/logo.png" height="100px"width="180px" style="padding-top: 0;">
+        </center>
+
+        <center>
+          <div class="tab">
+          <h2 style="color: rgb(27, 47, 106);">ఎరువుల అంచనా</h2>
+            <center>
+              <hr class="rounded">
+            </center>
+        <table>
+        <form action="/irrigation_telugu" method="POST"> 
+              <tr>
+                <td><lable>పంట రకం:</lable></td>
+                <td><input type="text" id="c_type" name="c_type" placeholder="ఉదాహరణకు: అరటి"></td>
+              </tr>
+
+              <tr>
+                <td><lable>మట్టి రకం:</lable></td>
+                <td><input type="text" id="s_type" name="s_type" placeholder="ఉదాహరణకు: పొడి"></td>
+              </tr>
+
+              <tr>
+                <td><lable>ప్రాంతం:</lable></td>
+                <td><input type="text" id="r" name="r" placeholder="ఉదాహరణకు: ఎడారి"></td>
+              </tr>
+
+              <tr>
+                <td><lable>ఉష్ణోగ్రత:</lable></td>
+                <td><input type="text" id="t" name="t" placeholder="ఉదాహరణకు: 10-20"></td>
+              </tr>
+
+              <tr>
+                <td><label>వాతావరణం:</label></td>
+                <td><input type="text" id="w" name="w" placeholder="ఉదాహరణకు: ఎండ"></td>
+              </tr>
+              
+              <tr>
+                <th colspan="2"><button class = "button5">నీటి స్థాయిని అంచనా వేయండి</button></th>
+              </tr>
+              <tr>
+                    <td align ="center" colspan="2"><a href="/">హోమ్కి</a> తిరిగి వెళ్ళండి</td>
+                </tr>
+        </form>
+    </table>
+  </div>
+</center>
+    </body>
+    </html>

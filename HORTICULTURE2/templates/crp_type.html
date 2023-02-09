@@ -1,0 +1,66 @@
+<html>
+
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename = 'style.css') }}">
+        <title>
+		Crop Reccomendation
+        </title>
+    </head>
+
+    <body style="background-image: url(static/images/bg-01.jpeg); background-repeat: no-repeat; background-size: cover;">
+        <center><img src="static/images/logo.png" height="100px"width="180px" style="padding-top: 0;"></center>
+        <center><div class="tab">
+          <h2 style="color: rgb(27, 47, 106);">Crop type Prediction</h2>
+            <center><hr class="rounded"></center>
+        <table>
+        <form action="/predict" method = "POST">
+
+            <tr>
+                <td><label>Enter Nitrogen:</label></td>
+                <td><input type="text" id="nit" name="nit" placeholder="For Example: 90"></td>
+              </tr>
+
+              <tr>
+                <td><label>Enter Phosphorous:</label></td>
+                <td><input type="text" id="phos" name="phos" placeholder="For Example: 42"></td>
+              </tr> 
+
+              <tr>
+                <td><label>Enter Potassium:</label></td>
+                <td><input type="text" id="pot" name="pot" placeholder="For Example: 43"></td>
+              </tr>
+
+              <tr>
+                <td><label>Enter Temperature:</label></td>
+                <td><input type="text" id="tem" name="tem" placeholder="For Example: 20.8"></td>
+              </tr>
+
+			        <tr>
+                <td><label>Enter Humidity:</label></td>
+                <td><input type="text" id="hum" name="hum" placeholder="For Example: 20.8"></td>
+              </tr>
+
+              <tr>
+                <td><label>Enter PH level:</label></td>
+                <td><input type="text" id="ph" name="ph" placeholder="For Example: 6.5"></td>
+              </tr>
+              
+              <tr>
+                <td><label>Enter Rainfall:</label></td>
+                <td><input type="text" id="rf" name="rf" placeholder="For Example: 202.93"></td>
+              </tr>
+
+              <tr>
+                <th colspan="2"><button class="button5">Predict Crop Type</button></th>
+              </tr>
+              
+              <tr>
+                    <td align ="center" colspan="2">Go back to <a href="/server_home">Home</a></td>
+                </tr>
+        </form>
+    </table>
+    </div></center>
+
+    </body>
+    
+    </html>

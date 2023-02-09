@@ -1,0 +1,165 @@
+/*home page*/
+body{
+    background-color: rgb(229, 241, 251);
+}
+.top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /*background-color: rgb(179, 226, 107);*/
+}
+.top nav{
+    display: flex;
+    padding-left: 15%;
+    justify-content: space-around;
+}
+.top nav h3{
+    padding-left: 40px;
+}
+.top nav a{
+    text-decoration: none;
+    color: black;
+}
+.top nav a:hover{
+    color: rgb(32, 90, 21);
+}
+.agri{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.agri img{
+    padding-left: 5%;
+}
+.agri .content{
+    padding-right: 5%;
+    font-style: italic;
+}
+.op .row1{
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+    justify-content: space-around; 
+}
+.op .row1{
+    flex-basis:30%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 30px;
+}
+.op1{
+    border: solid rgb(17, 16, 16);
+    border-radius: 50px;
+    height: 260px;
+    width: 260px;
+}
+.op2{
+    border: solid rgb(17, 16, 16);
+    border-radius: 50px;
+    height: 260px;
+    width: 260px;
+}
+.row1 .op1 img{
+    width: 150px;
+    height: 130px;
+}
+.row1 .op2 img{
+    width: 200px;
+    height: 130px;
+}
+.op1:hover{
+    transform: translateY(5px);
+}
+.op2:hover{
+    transform: translateY(5px);
+}
+.op1 button{
+    padding: 10px 45px;
+    text-align: center;
+    font-size: 15px;
+    border: none;
+    background-color: #81c8a4;
+background-image: linear-gradient(315deg, #97f587 0%, #93e771 74%);
+border-radius: 40px;
+}
+.op1 button:hover{
+    background: rgb(80, 149, 114);
+}
+.op1 button a{
+    text-decoration: none; 
+    color: purple;
+    font-weight: bolder;
+}
+.op2 button{
+    padding: 10px 45px;
+    text-align: center;
+    font-size: 15px;
+    border: none;
+    background-color: #81c8a4;
+background-image: linear-gradient(315deg, #97f587 0%, #93e771 74%);
+border-radius: 40px;
+}
+.op2 button:hover{
+    background: rgb(80, 149, 114);
+}
+.op2 button a{
+    text-decoration: none; 
+    color: purple;
+    font-weight: bolder;
+}
+.tab{
+    padding-top: 1%;
+    border: solid;
+    margin-left: 350px;
+    margin-right: 350px;
+    border-radius: 20px;
+}
+.tab table tr td{
+    font-size: large;
+}
+th, td
+{
+    padding: 10px;
+}
+input[type="text"]
+{
+    width: 200px;
+    height: 40px;
+}
+hr.rounded {
+    border-top: 4px solid rgb(50, 131, 158);
+    border-radius: 5px;
+    width: 150px;
+  }
+.button5{
+    padding: 10px 45px;
+    text-align: center;
+    font-size: 15px;
+    border: none;
+    background-color: #81c8a4;
+background-image: linear-gradient(315deg, #97f587 0%, #93e771 74%);
+border-radius: 40px;
+color: white;
+}
+.button5:hover{
+    background: rgb(16, 93, 54);
+}
+.agri button{
+    padding: 10px 45px;
+    text-align: center;
+    font-size: 20px;
+    border: none;
+    background-color: #81c8a4;
+background-image: linear-gradient(315deg, #97f587 0%, #93e771 74%);
+border-radius: 40px;
+}
+.agri button:hover{
+    background: rgb(80, 149, 114);
+}
+.agri button a{
+    text-decoration: none; 
+    color: purple;
+}
+
+
+

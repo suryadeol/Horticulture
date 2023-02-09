@@ -1,0 +1,69 @@
+*{
+    background-color: rgb(184, 216, 226);
+}
+.heading{
+    padding: 0;
+    margin: 0;
+}
+/*style for heading*/
+.heading{
+color: white;
+margin-left: 30px;
+margin-right: 30px;
+}
+/*textbox style*/
+input[type="text"]{
+border: solid;
+height: 30px;
+}
+/*bot text paragraph*/
+.botText{
+text-align: right; 
+color: aliceblue; 
+}
+.userText{
+    color: aliceblue;
+}
+.userText span {
+    background-color:rgb(9, 66, 85);
+    padding: 10px;
+    border-radius: 5px;
+    }
+.botText span {
+    background-color: rgb(48, 53, 116);
+    padding: 10px;
+    border-radius: 5px;
+    }
+/*.cbox p{
+    border: solid white;
+    background-color: aqua;
+}*/
+/*chat box conent div*/
+.cbox{
+    margin-left: 30px;
+    margin-right: 30px;
+}
+/*button*/
+.buttonInput{
+background-color: rgb(88, 122, 110);
+border-color: aliceblue;
+border-radius: 50%;
+}
+/*hover*/
+.buttonInput :hover{
+color: rgb(46, 106, 86);
+}
+/*button icon*/
+.buttonInput img{
+width: 30px;
+height: 30px;
+}
+/*textbox and button div*/
+.userInput{
+display: inline;
+position: fixed;
+}
+h1 {
+    background-color: rgb(64, 66, 81);
+    color: white;
+  }

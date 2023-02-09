@@ -1,0 +1,54 @@
+<html>
+<title>YEILD PREDICTION</title>
+
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename = 'style.css') }}">
+    </head>
+
+    <body style="background-image: url(static/images/bg-01.jpeg); background-repeat: no-repeat; background-size: cover;">
+        <center>
+            <img src="static/images/logo.png" height="100px"width="180px" style="padding-top: 0; ">
+        </center>
+
+        <center>
+            <div class="tab">
+                <h2 style="color: rgb(27, 47, 106);">Yeild Prediction</h2>
+                <center>
+                    <hr class="rounded">
+                </center>
+
+        <table  align="center" cellpadding="5" width="80%" height = "80%">
+            <form action="/yeild" method = "POST">
+                <tr>
+                    <td><lable>Enter State:</lable></td>
+                    <td><input type="text" id="state" name="state" placeholder="For Example: Andhra pradesh"></td>
+                </tr>
+                <tr>
+                    <td><lable>Enter District:</lable></td>
+                    <td><input type="text" id="dis" name="dis" placeholder="For Example: Krishna"></td>
+                </tr>
+                <tr>
+                    <td><lable>Enter Season:</lable></td>
+                    <td><input type="text" id="season" name="season" placeholder="For Example: Rabi"></td>
+                </tr>
+                <tr>
+                    <td><lable>Enter Crop Name:</lable></td>
+                    <td><input type="text" id="crop" name="crop" placeholder="For Example: rice"></td>
+                </tr>
+                <tr>
+                    <td><lable>Enter Area<br>(in hectares):</lable></td>
+                    <td><input type="text" id="area" name="area" placeholder="For Example: 5"></td>
+                </tr>
+                <tr>
+                    <td align ="center" colspan="2"><button class = "button5">Find Yeild</button></a></td>
+                </tr>
+                <tr>
+                    <td align ="center" colspan="2">Go back to <a href="/server_home">Home</a></td>
+                </tr>
+            </form>
+        </table>
+    </div>
+</center>
+</body>
+
+</html>

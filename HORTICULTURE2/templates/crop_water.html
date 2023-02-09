@@ -1,0 +1,61 @@
+<html>
+    <head>
+
+        <link rel="stylesheet" href="{{ url_for('static', filename = 'style.css') }}">
+
+		<title>
+		Irrigation Level Prediction
+    </title>
+
+    </head>
+
+    <body style="background-image: url(static/images/bg-01.jpeg); background-repeat: no-repeat; background-size: cover;">
+        <center>
+          <img src="static/images/logo.png" height="100px"width="180px" style="padding-top: 0;">
+        </center>
+
+        <center>
+          <div class="tab">
+          <h2 style="color: rgb(27, 47, 106);">Irrigation Level Prediction</h2>
+            <center>
+              <hr class="rounded">
+            </center>
+        <table>
+        <form action="/irrigation" method="POST"> 
+              <tr>
+                <td><lable>Crop type:</lable></td>
+                <td><input type="text" id="c_type" name="c_type" placeholder="For Example: banana"></td>
+              </tr>
+
+              <tr>
+                <td><lable>SOIL TYPE:</lable></td>
+                <td><input type="text" id="s_type" name="s_type" placeholder="For Example: dry"></td>
+              </tr>
+
+              <tr>
+                <td><lable>REGION:</lable></td>
+                <td><input type="text" id="r" name="r" placeholder="For Example: desert"></td>
+              </tr>
+
+              <tr>
+                <td><lable>TEMPERATURE:</lable></td>
+                <td><input type="text" id="t" name="t" placeholder="For Example: 10-20"></td>
+              </tr>
+
+              <tr>
+                <td><label>WHEATEHER:</label></td>
+                <td><input type="text" id="w" name="w" placeholder="For Example: sunny"></td>
+              </tr>
+              
+              <tr>
+                <th colspan="2"><button class = "button5">Predict water level</button></th>
+              </tr>
+              <tr>
+                    <td align ="center" colspan="2">Go back to <a href="/server_home">Home</a></td>
+                </tr>
+        </form>
+    </table>
+  </div>
+</center>
+    </body>
+    </html>
